@@ -13,7 +13,7 @@ export default function App() {
   console.log(user);
 
   return (
-    <div className="flex flex-wrap justify-center gap-5">
+    <div className="flex flex-wrap justify-center gap-5 m-5 p-5">
       {user.map((user) => (
         <LoadUser key={user.id} userInfo={user} />
       ))}
