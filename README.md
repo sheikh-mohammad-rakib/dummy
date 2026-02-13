@@ -1,16 +1,83 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# User Cards React App
 
-Currently, two official plugins are available:
+This project is a simple React application that fetches and displays a list of users from an external API. The UI is styled using Tailwind CSS and daisyUI for a modern, responsive look.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Fetches user data from https://dummyjson.com/users
+- Displays users in responsive cards with image, name, and email
+- "Buy Now" button on each user card
+- Styled with Tailwind CSS and daisyUI components
+- Clean, minimal, and mobile-friendly interface
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Setup and Usage
 
-## Expanding the ESLint configuration
+1. **Install dependencies:**
+	```
+	npm install
+	```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Start the development server:**
+	```
+	npm run dev
+	```
+	The app will be available at the local address shown in the terminal.
+
+3. **Build for production:**
+	```
+	npm run build
+	```
+
+4. **Preview the production build:**
+	```
+	npm run preview
+	```
+
+5. **Lint the code:**
+	```
+	npm run lint
+	```
+
+## Custom Scripts
+
+- `dev`: Start the Vite development server
+- `build`: Build the app for production
+- `preview`: Preview the production build locally
+- `lint`: Run ESLint on the project
+
+## Notable Dependencies
+
+- **React**: UI library for building the app
+- **Vite**: Fast development/build tool
+- **Tailwind CSS**: Utility-first CSS framework
+- **daisyUI**: Tailwind CSS component library
+- **@vitejs/plugin-react-swc**: React plugin for Vite with SWC
+- **ESLint**: Linting for code quality
+
+## Folder Structure
+
+```
+d:/mern/
+│
+├── public/                # Static assets
+├── src/
+│   ├── App.jsx            # Main app component; fetches and displays users
+│   ├── LoadUser.jsx       # Component for rendering a single user card
+│   ├── main.jsx           # Entry point; renders App into the DOM
+│   ├── index.css          # Imports Tailwind CSS and daisyUI
+│   ├── App.css            # (Empty, reserved for custom styles if needed)
+│   └── assets/            # Images or other assets
+│
+├── index.html             # Main HTML file, includes root div for React
+├── package.json           # Project metadata, scripts, and dependencies
+├── vite.config.js         # Vite configuration (React, Tailwind plugins)
+├── eslint.config.js       # ESLint configuration
+└── README.md              # Project documentation (this file)
+```
+
+## Notes
+
+- All UI is built with React components and styled using Tailwind CSS and daisyUI classes.
+- No custom CSS is used; all styling is via utility classes and daisyUI components.
+- The project is minimal and focused on demonstrating API data fetching and modern UI practices.
